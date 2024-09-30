@@ -13,6 +13,13 @@ pipeline {
                     sh 'yarn install'
                 }
             }
+        stage('Install PM2') {
+            steps {
+                script {
+                    sh 'npm install -g pm2'
+                }
+            }
+        }
         }
 
         stage('Run the App') {
